@@ -1,0 +1,69 @@
+# This is an example configuration file for the gitlab CI pipeline
+#
+# This template shows how to run the different example tests that are provided
+# when you first create the project. Use this template as an starting point
+# for running your own tests on the gitlab CI pipeline
+#
+# IMPORTANT! The docker images used here are from the internal veepee artifactory
+# (registry.vptech.eu) so you may need to add you credentials to the pipeline
+# configuration to avoid an unauthorized error when using them.
+#
+# Check the README file to see all alternative ways of running your features.
+#
+# Happy testing!
+
+
+# This template uses jdk11 for for running tests
+image: docker.registry.vptech.eu/maven:3.8.5-jdk-11
+
+
+# Cache downloaded dependencies and plugins between builds.
+# To keep cache across branches add 'key: "$CI_JOB_NAME"'
+cache:
+  paths:
+    - .m2/repository
+
+# This is just an example that you can use as a starting point for executing your tests in the pipeline. Jobs that are inside the same stage
+# are executed in parallel
+
+UITest:
+  stage: test
+  services:
+    - name: docker.registry.vptech.eu/selenium/standalone-chrome:3.141.59
+      alias: node
+  script:
+    - 'mvn verify -Dcucumber.filter.tags="@web" -DSELENIUM_GRID=http://node:4444/wd/hub'
+  artifacts:
+    paths:
+      - target/executions/**
+      - target/*.json
+    when: always
+    expire_in: 4 weeks
+
+RestAPITest:
+  stage: test
+  script:
+    - 'mvn verify -Dcucumber.filter.tags="@rest"'
+  artifacts:
+    paths:
+      - target/*.json
+    when: always
+    expire_in: 4 weeks
+
+
+# This job takes all json files found in target/ to generate an HTML cucumber report which then published
+# in Github pages. You need to activate the 'Github pages' functionality in your repo for this to work
+pages:
+  stage: deploy
+  when: always
+  script:
+    - mvn verify -Dmaven.test.skip=true
+    - mkdir -p ./public
+    - cp -r target/cucumber-html-reports/* public/
+    - cp public/overview-features.html public/index.html
+  artifacts:
+    paths:
+      - public
+    expire_in: 4 weeks
+
+
