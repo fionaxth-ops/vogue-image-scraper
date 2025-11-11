@@ -1,0 +1,15 @@
+[project]
+name = "vogue-data-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "selenium>=4.36.0",
+    "webdriver-manager>=4.0.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.31.0",
+]
