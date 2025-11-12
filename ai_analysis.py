@@ -6,7 +6,6 @@ BATCH_SIZE = 10
 
 
 client = OpenAI(
-    api_key="AIzaSyBq2G0ETwhOamp3_4JcCwdhuSR84yFm2G8",
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
