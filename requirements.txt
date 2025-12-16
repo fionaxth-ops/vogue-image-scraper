@@ -1,0 +1,23 @@
+# --- Core ---
+apache-airflow==2.9.3
+# Follow official constraints
+apache-airflow-providers-common-io #==1.6.3
+apache-airflow-providers-common-sql #==1.28.1
+apache-airflow-providers-smtp #==2.3.1
+apache-airflow-providers-standard #==1.9.0
+
+# --- Selenium (safe version) ---
+selenium==4.10.0
+webdriver-manager==4.0.1
+
+# --- Scraping dependencies ---
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# --- Utility libraries ---
+python-dotenv==1.0.1
+Pillow==10.2.0
+
+webdriver-manager==4.0.1
+
+
