@@ -1,11 +1,18 @@
 from airflow import DAG
 from datetime import datetime
-from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator
 import os
+from pathlib import Path
+import sys
+from vogue_image_scraper import login_to_vogue, scrape_slideshow
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # points to airflow/dags
-SCRIPT_PATH = os.path.join(BASE_DIR, "scripts", "vogue_image_scraper.py")
 
+
+sys.path.append(str(Path(__file__).parent / "scripts"))
+
+def scrape_task():
+    login_to_vogue(os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
+    scrape_slideshow()
 
 with DAG(
     dag_id="vogue_ai_data_etl",
@@ -16,10 +23,11 @@ with DAG(
     render_template_as_native_obj=True
 ) as dag:
 
-        run_script_task = BashOperator(
-            task_id='scrape_images',
-            bash_command='python3 /opt/airflow/dags/scripts/vogue_image_scraper.py'
-        )   
+    scrape_operator = PythonOperator(
+        task_id="scrape_vogue_slideshow",
+        python_callable=scrape_task,
+    )
+
 # from airflow import DAG
 # from datetime import datetime
 # from airflow.operators.bash import BashOperator

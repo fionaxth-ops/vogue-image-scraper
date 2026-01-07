@@ -4,7 +4,7 @@
 # In[4]:
 
 
-from selenium import webdriver
+# from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -17,6 +17,7 @@ import time
 from PIL import Image
 from dotenv import load_dotenv
 from pathlib import Path
+import undetected_chromedriver as uc
 
 
 load_dotenv()
@@ -32,11 +33,11 @@ USER_AGENT = "Mozilla/5.0"
 
 # In[5]:
 
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager
+# from selenium.webdriver.chrome.service import Service
 
-service = Service(ChromeDriverManager().install())
-service.path = str(Path(service.path).with_name("chromedriver"))  # force correct binary
+# service = Service(ChromeDriverManager().install())
+# service.path = str(Path(service.path).with_name("chromedriver"))  # force correct binary
 
 
 
@@ -44,15 +45,25 @@ options = Options()
 options.add_argument("--start-maximized")
 options.add_argument(f"user-agent={USER_AGENT}")
 options.add_argument("--disable-blink-features=AutomationControlled")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
 
-driver = webdriver.Chrome(
-    service=service,
-    options=options
-)
+driver = uc.Chrome(options=options)  # automatically manages driver
+
+
+# driver_path = ChromeDriverManager().install()
+# service = Service(driver_path)
+
+# driver = webdriver.Chrome(service=service, options=options)
+# driver = webdriver.Chrome(
+#     service=service,
+#     options=options
+# )
 
 # driver = webdriver.Chrome( 
 #     options=options
 # )
+
 wait = WebDriverWait(driver, WAIT_TIME)
 
 
@@ -96,11 +107,11 @@ def login_to_vogue(email: str, password: str):
     )
     driver.execute_script("arguments[0].click();", sign_in_button)
 
-
-    # no_passkey_button = wait.until(
-    #     EC.presence_of_element_located((By.CSS_SELECTOR, "#do-not-setup-passkey-button"))
-    # )
-    # driver.execute_script("arguments[0].click();", no_passkey_button)
+    # Remove if passkey is not asked for
+    no_passkey_button = wait.until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, "#do-not-setup-passkey-button"))
+    )
+    driver.execute_script("arguments[0].click();", no_passkey_button)
 
     WebDriverWait(driver, 25).until(is_logged_in)
     driver.get(SLIDESHOW_URL)

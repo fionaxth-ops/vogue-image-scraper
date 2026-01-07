@@ -1,0 +1,715 @@
+[2026-01-06T13:58:04.086+1100] {processor.py:161} INFO - Started process (PID=85452) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T13:58:04.086+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T13:58:04.087+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.087+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T13:58:04.091+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T13:58:04.169+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.169+1100] {override.py:1858} INFO - Created Permission View: can edit on DAG:vogue_ai_data_etl
+[2026-01-06T13:58:04.172+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.172+1100] {override.py:1858} INFO - Created Permission View: can read on DAG:vogue_ai_data_etl
+[2026-01-06T13:58:04.175+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.174+1100] {override.py:1858} INFO - Created Permission View: can delete on DAG:vogue_ai_data_etl
+[2026-01-06T13:58:04.175+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.175+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T13:58:04.205+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.205+1100] {dag.py:3111} INFO - Creating ORM DAG for vogue_ai_data_etl
+[2026-01-06T13:58:04.208+1100] {logging_mixin.py:188} INFO - [2026-01-06T13:58:04.208+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2025-12-10 00:00:00+00:00, run_after=2025-12-11 00:00:00+00:00
+[2026-01-06T13:58:04.214+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.130 seconds
+[2026-01-06T14:00:03.613+1100] {processor.py:161} INFO - Started process (PID=86825) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:00:03.614+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:00:03.614+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:00:03.614+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:00:03.618+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:00:03.662+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:00:03.661+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:00:03.668+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:00:03.668+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2025-12-11 00:00:00+00:00, run_after=2025-12-12 00:00:00+00:00
+[2026-01-06T14:00:03.675+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.063 seconds
+[2026-01-06T14:02:04.536+1100] {processor.py:161} INFO - Started process (PID=87077) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:02:04.536+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:02:04.537+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:02:04.537+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:02:04.541+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:02:04.630+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:02:04.630+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:02:04.664+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:02:04.664+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2025-12-27 00:00:00+00:00, run_after=2025-12-28 00:00:00+00:00
+[2026-01-06T14:02:04.672+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.138 seconds
+[2026-01-06T14:03:08.329+1100] {processor.py:161} INFO - Started process (PID=87180) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:03:08.330+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:03:08.330+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:03:08.330+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:03:08.334+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:03:08.380+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:03:08.379+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:03:08.386+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:03:08.386+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:03:08.394+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.067 seconds
+[2026-01-06T14:04:08.522+1100] {processor.py:161} INFO - Started process (PID=87243) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:04:08.523+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:04:08.523+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:04:08.523+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:04:08.527+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:04:08.572+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:04:08.572+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:04:08.578+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:04:08.578+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:04:08.585+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.065 seconds
+[2026-01-06T14:05:07.721+1100] {processor.py:161} INFO - Started process (PID=87367) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:05:07.721+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:05:07.721+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:05:07.721+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:05:07.726+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:05:07.818+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:05:07.817+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:05:07.850+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:05:07.850+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:05:07.858+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.139 seconds
+[2026-01-06T14:06:07.509+1100] {processor.py:161} INFO - Started process (PID=87472) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:06:07.510+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:06:07.510+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:06:07.510+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:06:07.514+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:06:07.558+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:06:07.557+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:06:07.564+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:06:07.564+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:06:07.572+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.064 seconds
+[2026-01-06T14:07:08.936+1100] {processor.py:161} INFO - Started process (PID=87583) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:07:08.937+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:07:08.937+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:07:08.937+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:07:08.940+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:07:08.940+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 19, in <module>
+    run_script_task = PythonOperator(
+                      ^^^^^^^^^^^^^^
+NameError: name 'PythonOperator' is not defined
+[2026-01-06T14:07:08.940+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:07:08.974+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.040 seconds
+[2026-01-06T14:08:08.786+1100] {processor.py:161} INFO - Started process (PID=87650) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:08:08.787+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:08:08.787+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:08:08.787+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:08:08.790+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:08:08.789+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 3, in <module>
+    from airflow.operators.bash import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators.bash' (/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py)
+[2026-01-06T14:08:08.790+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:08:08.828+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.044 seconds
+[2026-01-06T14:09:05.673+1100] {processor.py:161} INFO - Started process (PID=87692) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:09:05.674+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:09:05.674+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:09:05.674+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:09:05.676+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:09:05.675+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 3, in <module>
+    from airflow.operators.bash import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators.bash' (/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py)
+[2026-01-06T14:09:05.676+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:09:05.710+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.038 seconds
+[2026-01-06T14:10:06.641+1100] {processor.py:161} INFO - Started process (PID=87755) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:10:06.643+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:10:06.643+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:10:06.643+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:10:06.645+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:10:06.645+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 3, in <module>
+    from airflow.operators.bash import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators.bash' (/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py)
+[2026-01-06T14:10:06.647+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:10:06.683+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.043 seconds
+[2026-01-06T14:11:06.831+1100] {processor.py:161} INFO - Started process (PID=87824) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:11:06.832+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:11:06.832+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:11:06.832+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:11:06.834+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:11:06.834+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 3, in <module>
+    from airflow.operators.bash import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators.bash' (/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py)
+[2026-01-06T14:11:06.834+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:11:06.870+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.039 seconds
+[2026-01-06T14:12:04.194+1100] {processor.py:161} INFO - Started process (PID=87920) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:12:04.195+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:12:04.196+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:12:04.195+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:12:04.198+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:12:04.197+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 3, in <module>
+    from airflow.operators.bash import PythonOperator
+ImportError: cannot import name 'PythonOperator' from 'airflow.operators.bash' (/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py)
+[2026-01-06T14:12:04.198+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:12:04.231+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.038 seconds
+[2026-01-06T14:13:04.805+1100] {processor.py:161} INFO - Started process (PID=87978) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:13:04.806+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:13:04.806+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:13:04.806+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:13:04.819+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:13:04.929+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:13:04.929+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:13:04.935+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:13:04.935+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:13:04.943+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.139 seconds
+[2026-01-06T14:14:09.940+1100] {processor.py:161} INFO - Started process (PID=88475) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:14:09.941+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:14:09.941+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:14:09.941+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:14:09.953+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:14:09.998+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:14:09.998+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:14:10.005+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:14:10.005+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:14:10.013+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:15:12.171+1100] {processor.py:161} INFO - Started process (PID=88915) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:15:12.171+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:15:12.172+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:15:12.172+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:15:12.183+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:15:12.227+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:15:12.227+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:15:12.234+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:15:12.234+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:15:12.242+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.072 seconds
+[2026-01-06T14:16:09.151+1100] {processor.py:161} INFO - Started process (PID=89105) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:16:09.151+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:16:09.151+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:16:09.151+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:16:09.164+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:16:09.210+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:16:09.210+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:16:09.218+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:16:09.217+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:16:09.225+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:17:06.025+1100] {processor.py:161} INFO - Started process (PID=89294) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:17:06.026+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:17:06.026+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:17:06.026+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:17:06.039+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:17:06.083+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:17:06.083+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:17:06.090+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:17:06.090+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:17:06.098+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T14:18:03.521+1100] {processor.py:161} INFO - Started process (PID=89410) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:18:03.522+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:18:03.523+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:18:03.523+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:18:03.535+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:18:03.578+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:18:03.578+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:18:03.586+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:18:03.586+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:18:03.593+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T14:19:03.040+1100] {processor.py:161} INFO - Started process (PID=89899) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:19:03.042+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:19:03.042+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:19:03.042+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:19:03.054+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:19:03.095+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:19:03.095+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:19:03.101+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:19:03.101+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:19:03.108+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.069 seconds
+[2026-01-06T14:20:04.865+1100] {processor.py:161} INFO - Started process (PID=89970) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:20:04.866+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:20:04.867+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:20:04.866+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:20:04.879+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:20:04.922+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:20:04.922+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:20:04.930+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:20:04.930+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:20:04.938+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.075 seconds
+[2026-01-06T14:21:05.974+1100] {processor.py:161} INFO - Started process (PID=90007) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:21:05.976+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:21:05.976+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:21:05.976+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:21:05.989+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:21:06.033+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:21:06.033+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:21:06.040+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:21:06.040+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:21:06.048+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:22:06.954+1100] {processor.py:161} INFO - Started process (PID=90054) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:22:06.956+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:22:06.956+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:22:06.956+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:22:06.967+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:22:07.009+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:22:07.008+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:22:07.015+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:22:07.015+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:22:07.022+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.069 seconds
+[2026-01-06T14:23:02.718+1100] {processor.py:161} INFO - Started process (PID=90098) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:02.719+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:23:02.720+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:02.720+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:02.731+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:02.771+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:02.771+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:23:02.778+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:02.778+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:23:02.785+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.068 seconds
+[2026-01-06T14:23:56.051+1100] {processor.py:161} INFO - Started process (PID=90150) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:56.053+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:23:56.053+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:56.053+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:56.065+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:23:56.111+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:56.111+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:23:56.118+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:23:56.118+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:23:56.126+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:24:49.092+1100] {processor.py:161} INFO - Started process (PID=90194) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:24:49.093+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:24:49.093+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:24:49.093+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:24:49.106+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:24:49.150+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:24:49.150+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:24:49.157+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:24:49.157+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:24:49.165+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T14:25:46.258+1100] {processor.py:161} INFO - Started process (PID=90427) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:25:46.258+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:25:46.259+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:25:46.259+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:25:46.271+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:25:46.317+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:25:46.317+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:25:46.326+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:25:46.326+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:25:46.334+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.077 seconds
+[2026-01-06T14:26:45.589+1100] {processor.py:161} INFO - Started process (PID=90526) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:26:45.591+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:26:45.591+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:26:45.591+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:26:45.604+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:26:45.650+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:26:45.650+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:26:45.657+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:26:45.657+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:26:45.666+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.078 seconds
+[2026-01-06T14:27:45.134+1100] {processor.py:161} INFO - Started process (PID=90737) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:27:45.136+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:27:45.136+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:27:45.136+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:27:45.148+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:27:45.188+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:27:45.188+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:27:45.194+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:27:45.194+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:27:45.201+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.068 seconds
+[2026-01-06T14:28:42.495+1100] {processor.py:161} INFO - Started process (PID=90881) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:28:42.495+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:28:42.496+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:28:42.496+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:28:42.509+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:28:42.555+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:28:42.555+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:28:42.563+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:28:42.563+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:28:42.572+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.078 seconds
+[2026-01-06T14:29:46.220+1100] {processor.py:161} INFO - Started process (PID=91361) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:29:46.222+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:29:46.222+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:29:46.222+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:29:46.234+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:29:46.278+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:29:46.278+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:29:46.287+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:29:46.287+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:29:46.294+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:30:46.438+1100] {processor.py:161} INFO - Started process (PID=91592) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:30:46.439+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:30:46.439+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:30:46.439+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:30:46.451+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:30:46.495+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:30:46.495+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:30:46.503+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:30:46.503+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:30:46.510+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.073 seconds
+[2026-01-06T14:31:44.972+1100] {processor.py:161} INFO - Started process (PID=91930) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:31:44.973+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:31:44.973+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:31:44.973+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:31:44.990+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:31:45.034+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:31:45.034+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:31:45.042+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:31:45.042+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:31:45.050+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.079 seconds
+[2026-01-06T14:32:45.614+1100] {processor.py:161} INFO - Started process (PID=92140) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:32:45.615+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:32:45.615+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:32:45.615+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:32:45.628+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:32:45.673+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:32:45.673+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:32:45.681+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:32:45.681+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:32:45.689+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:33:43.848+1100] {processor.py:161} INFO - Started process (PID=92257) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:33:43.850+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:33:43.850+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:33:43.850+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:33:43.867+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:33:43.913+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:33:43.913+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:33:43.921+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:33:43.921+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:33:43.928+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.082 seconds
+[2026-01-06T14:34:42.264+1100] {processor.py:161} INFO - Started process (PID=92431) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:34:42.265+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:34:42.265+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:34:42.265+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:34:42.278+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:34:42.325+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:34:42.324+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:34:42.333+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:34:42.333+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:34:42.341+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.078 seconds
+[2026-01-06T14:35:40.809+1100] {processor.py:161} INFO - Started process (PID=92503) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:35:40.810+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:35:40.810+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:35:40.810+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:35:40.823+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:35:40.867+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:35:40.867+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:35:40.876+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:35:40.876+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:35:40.884+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.077 seconds
+[2026-01-06T14:36:42.331+1100] {processor.py:161} INFO - Started process (PID=92634) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:36:42.331+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:36:42.332+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:36:42.332+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:36:42.345+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:36:42.392+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:36:42.392+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:36:42.404+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:36:42.404+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:36:42.414+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.085 seconds
+[2026-01-06T14:37:43.817+1100] {processor.py:161} INFO - Started process (PID=92720) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:37:43.817+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:37:43.818+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:37:43.818+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:37:43.831+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:37:43.877+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:37:43.876+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:37:43.885+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:37:43.885+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:37:43.896+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.080 seconds
+[2026-01-06T14:38:44.523+1100] {processor.py:161} INFO - Started process (PID=92868) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:38:44.524+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:38:44.524+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:38:44.524+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:38:44.537+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:38:44.580+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:38:44.580+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:38:44.590+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:38:44.590+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:38:44.598+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:39:43.194+1100] {processor.py:161} INFO - Started process (PID=92904) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:39:43.194+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:39:43.195+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:39:43.194+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:39:43.207+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:39:43.252+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:39:43.252+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:39:43.260+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:39:43.260+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:39:43.268+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.075 seconds
+[2026-01-06T14:40:38.648+1100] {processor.py:161} INFO - Started process (PID=92941) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:40:38.648+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:40:38.649+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:40:38.649+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:40:38.661+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:40:38.701+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:40:38.701+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:40:38.709+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:40:38.709+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:40:38.716+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.070 seconds
+[2026-01-06T14:41:32.958+1100] {processor.py:161} INFO - Started process (PID=92977) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:41:32.960+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:41:32.960+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:41:32.960+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:41:32.972+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:41:33.014+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:41:33.014+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:41:33.021+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:41:33.021+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:41:33.028+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.070 seconds
+[2026-01-06T14:42:33.130+1100] {processor.py:161} INFO - Started process (PID=93021) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:42:33.131+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:42:33.131+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:42:33.131+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:42:33.144+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:42:33.187+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:42:33.186+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:42:33.194+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:42:33.194+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:42:33.201+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.073 seconds
+[2026-01-06T14:43:29.764+1100] {processor.py:161} INFO - Started process (PID=93058) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:43:29.765+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:43:29.765+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:43:29.765+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:43:29.777+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:43:29.818+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:43:29.817+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:43:29.826+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:43:29.826+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:43:29.833+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.071 seconds
+[2026-01-06T14:44:29.118+1100] {processor.py:161} INFO - Started process (PID=93100) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:44:29.118+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:44:29.119+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:44:29.119+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:44:29.131+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:44:29.173+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:44:29.173+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:44:29.180+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:44:29.180+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:44:29.188+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.072 seconds
+[2026-01-06T14:45:29.333+1100] {processor.py:161} INFO - Started process (PID=93145) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:45:29.333+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:45:29.334+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:45:29.334+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:45:29.345+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:45:29.385+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:45:29.385+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:45:29.393+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:45:29.393+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:45:29.400+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.068 seconds
+[2026-01-06T14:46:25.677+1100] {processor.py:161} INFO - Started process (PID=93182) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:46:25.678+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:46:25.678+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:46:25.678+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:46:25.691+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:46:25.732+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:46:25.732+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:46:25.739+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:46:25.739+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:46:25.746+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.071 seconds
+[2026-01-06T14:47:22.985+1100] {processor.py:161} INFO - Started process (PID=93225) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:47:22.987+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:47:22.987+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:47:22.987+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:47:23.001+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:47:23.043+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:47:23.043+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:47:23.051+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:47:23.051+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:47:23.057+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.073 seconds
+[2026-01-06T14:48:22.352+1100] {processor.py:161} INFO - Started process (PID=93263) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:48:22.353+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:48:22.353+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:48:22.353+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:48:22.366+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:48:22.417+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:48:22.417+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:48:22.426+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:48:22.426+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:48:22.435+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.084 seconds
+[2026-01-06T14:49:23.321+1100] {processor.py:161} INFO - Started process (PID=93328) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:49:23.322+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:49:23.323+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:49:23.322+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:49:23.335+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:49:23.381+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:49:23.381+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:49:23.389+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:49:23.389+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:49:23.399+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.079 seconds
+[2026-01-06T14:50:21.314+1100] {processor.py:161} INFO - Started process (PID=93366) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:50:21.315+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:50:21.315+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:50:21.315+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:50:21.327+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:50:21.368+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:50:21.368+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:50:21.376+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:50:21.376+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:50:21.383+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.071 seconds
+[2026-01-06T14:51:15.216+1100] {processor.py:161} INFO - Started process (PID=93415) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:51:15.216+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:51:15.217+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:51:15.217+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:51:15.232+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:51:15.278+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:51:15.278+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:51:15.286+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:51:15.286+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:51:15.297+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.083 seconds
+[2026-01-06T14:52:14.104+1100] {processor.py:161} INFO - Started process (PID=93480) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:52:14.105+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:52:14.105+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:52:14.105+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:52:14.118+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:52:14.161+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:52:14.161+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:52:14.169+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:52:14.169+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:52:14.176+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T14:53:10.355+1100] {processor.py:161} INFO - Started process (PID=93545) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:53:10.356+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:53:10.357+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:53:10.357+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:53:10.370+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:53:10.416+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:53:10.416+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:53:10.425+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:53:10.425+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:53:10.433+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.080 seconds
+[2026-01-06T14:54:09.278+1100] {processor.py:161} INFO - Started process (PID=93624) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:54:09.279+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:54:09.279+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:54:09.279+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:54:09.291+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:54:09.336+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:54:09.336+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:54:09.343+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:54:09.343+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:54:09.350+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T14:55:08.032+1100] {processor.py:161} INFO - Started process (PID=93730) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:55:08.033+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:55:08.033+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:55:08.033+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:55:08.046+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:55:08.089+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:55:08.088+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:55:08.096+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:55:08.096+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:55:08.103+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.073 seconds
+[2026-01-06T14:56:07.017+1100] {processor.py:161} INFO - Started process (PID=93772) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:56:07.018+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:56:07.018+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:56:07.018+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:56:07.031+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:56:07.073+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:56:07.073+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:56:07.080+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:56:07.079+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:56:07.086+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.071 seconds
+[2026-01-06T14:57:06.940+1100] {processor.py:161} INFO - Started process (PID=93835) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:57:06.941+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:57:06.941+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:57:06.941+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:57:06.955+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:57:07.000+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:57:07.000+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:57:07.008+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:57:07.008+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:57:07.016+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T14:58:04.610+1100] {processor.py:161} INFO - Started process (PID=93881) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:58:04.611+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:58:04.612+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:58:04.611+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:58:04.624+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:58:04.669+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:58:04.669+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:58:04.677+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:58:04.677+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:58:04.687+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.078 seconds
+[2026-01-06T14:59:01.909+1100] {processor.py:161} INFO - Started process (PID=93984) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:59:01.910+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T14:59:01.910+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:59:01.910+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:59:01.923+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T14:59:01.968+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:59:01.968+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T14:59:01.976+1100] {logging_mixin.py:188} INFO - [2026-01-06T14:59:01.976+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T14:59:01.983+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T15:00:04.032+1100] {processor.py:161} INFO - Started process (PID=94069) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:00:04.033+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:00:04.034+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:00:04.033+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:00:04.056+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:00:04.101+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:00:04.101+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:00:04.109+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:00:04.109+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:00:04.119+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.088 seconds
+[2026-01-06T15:01:02.188+1100] {processor.py:161} INFO - Started process (PID=94143) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:01:02.189+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:01:02.189+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:01:02.189+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:01:02.201+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:01:02.245+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:01:02.245+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:01:02.253+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:01:02.253+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:01:02.260+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.074 seconds
+[2026-01-06T15:02:01.898+1100] {processor.py:161} INFO - Started process (PID=94208) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:02:01.899+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:02:01.899+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:02:01.899+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:02:01.917+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:02:01.976+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:02:01.976+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:02:01.984+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:02:01.984+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:02:01.992+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.095 seconds
+[2026-01-06T15:03:03.665+1100] {processor.py:161} INFO - Started process (PID=94386) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:03:03.667+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:03:03.667+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:03:03.667+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:03:03.680+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:03:03.783+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:03:03.783+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:03:03.789+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:03:03.789+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:03:03.797+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.134 seconds
+[2026-01-06T15:04:03.203+1100] {processor.py:161} INFO - Started process (PID=94553) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:04:03.204+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:04:03.204+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:04:03.204+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:04:03.217+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:04:03.259+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:04:03.259+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:04:03.266+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:04:03.266+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:04:03.273+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.072 seconds
+[2026-01-06T15:05:04.227+1100] {processor.py:161} INFO - Started process (PID=94598) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:05:04.227+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:05:04.228+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:05:04.227+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:05:04.240+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:05:04.281+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:05:04.281+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:05:04.288+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:05:04.288+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:05:04.295+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.070 seconds
+[2026-01-06T15:06:01.772+1100] {processor.py:161} INFO - Started process (PID=94646) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:06:01.772+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:06:01.773+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:06:01.773+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:06:01.785+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:06:01.830+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:06:01.830+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:06:01.838+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:06:01.838+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:06:01.846+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.076 seconds
+[2026-01-06T15:07:03.282+1100] {processor.py:161} INFO - Started process (PID=94755) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:07:03.283+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:07:03.283+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:07:03.283+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:07:04.769+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:07:04.768+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T15:07:33.300+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:07:33.293+1100] {timeout.py:68} ERROR - Process timed out, PID: 94755
+[2026-01-06T15:11:55.273+1100] {processor.py:161} INFO - Started process (PID=95145) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:11:55.273+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:11:55.274+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:11:55.274+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:11:56.384+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:11:56.384+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T15:11:58.995+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:11:59.044+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:11:59.044+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:11:59.058+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 3.787 seconds
+[2026-01-06T15:13:27.391+1100] {processor.py:161} INFO - Started process (PID=95303) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:13:27.391+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:13:27.392+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:13:27.392+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:13:28.410+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:13:28.410+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T15:13:31.325+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:13:31.382+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:13:31.382+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:13:31.392+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:13:31.392+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:13:31.400+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 4.011 seconds
+[2026-01-06T15:14:31.363+1100] {processor.py:161} INFO - Started process (PID=95405) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:14:31.364+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T15:14:31.365+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:14:31.365+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:14:32.758+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:14:32.758+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T15:15:57.628+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T15:15:57.676+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:15:57.676+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T15:15:57.684+1100] {logging_mixin.py:188} INFO - [2026-01-06T15:15:57.684+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T15:15:57.692+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 4.081 seconds
+[2026-01-06T17:00:02.009+1100] {processor.py:161} INFO - Started process (PID=95530) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T17:00:02.010+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T17:00:02.010+1100] {logging_mixin.py:188} INFO - [2026-01-06T17:00:02.010+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T17:00:02.239+1100] {logging_mixin.py:188} INFO - [2026-01-06T17:00:02.234+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1294, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1340, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1289, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1048, in _send_output
+    self.send(msg)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 986, in send
+    self.connect()
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1459, in connect
+    super().connect()
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 952, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 10, in <module>
+    from vogue_image_scraper import login_to_vogue, scrape_slideshow
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/scripts/vogue_image_scraper.py", line 51, in <module>
+    driver = uc.Chrome(options=options)  # automatically manages driver
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/__init__.py", line 258, in __init__
+    self.patcher.auto()
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/patcher.py", line 175, in auto
+    release = self.fetch_release_number()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/patcher.py", line 250, in fetch_release_number
+    with urlopen(self.url_repo + path) as conn:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+[2026-01-06T17:00:02.240+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T17:00:02.271+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.263 seconds
+[2026-01-06T19:49:16.073+1100] {processor.py:161} INFO - Started process (PID=95627) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T19:49:16.074+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T19:49:16.074+1100] {logging_mixin.py:188} INFO - [2026-01-06T19:49:16.074+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T19:49:16.310+1100] {logging_mixin.py:188} INFO - [2026-01-06T19:49:16.306+1100] {dagbag.py:355} ERROR - Failed to import: /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+Traceback (most recent call last):
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1294, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1340, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1289, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1048, in _send_output
+    self.send(msg)
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 986, in send
+    self.connect()
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 1459, in connect
+    super().connect()
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/http/client.py", line 952, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/socket.py", line 827, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py", line 10, in <module>
+    from vogue_image_scraper import login_to_vogue, scrape_slideshow
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/scripts/vogue_image_scraper.py", line 51, in <module>
+    driver = uc.Chrome(options=options)  # automatically manages driver
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/__init__.py", line 258, in __init__
+    self.patcher.auto()
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/patcher.py", line 175, in auto
+    release = self.fetch_release_number()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/undetected_chromedriver/patcher.py", line 250, in fetch_release_number
+    with urlopen(self.url_repo + path) as conn:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/.pyenv/versions/3.11.7/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+[2026-01-06T19:49:16.312+1100] {processor.py:842} WARNING - No viable dags retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T19:49:16.348+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 0.276 seconds
+[2026-01-06T20:52:30.425+1100] {processor.py:161} INFO - Started process (PID=95778) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T20:52:30.426+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T20:52:30.426+1100] {logging_mixin.py:188} INFO - [2026-01-06T20:52:30.426+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T20:52:42.898+1100] {logging_mixin.py:188} INFO - [2026-01-06T20:52:42.898+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T20:52:46.076+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T20:52:46.179+1100] {logging_mixin.py:188} INFO - [2026-01-06T20:52:46.179+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T20:52:46.186+1100] {logging_mixin.py:188} INFO - [2026-01-06T20:52:46.186+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T20:52:46.194+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 15.771 seconds
+[2026-01-06T22:20:28.636+1100] {processor.py:161} INFO - Started process (PID=95896) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T22:20:28.637+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T22:20:28.637+1100] {logging_mixin.py:188} INFO - [2026-01-06T22:20:28.637+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T22:20:30.514+1100] {logging_mixin.py:188} INFO - [2026-01-06T22:20:30.514+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T22:35:35.344+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T22:35:35.404+1100] {logging_mixin.py:188} INFO - [2026-01-06T22:35:35.404+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T22:35:35.412+1100] {logging_mixin.py:188} INFO - [2026-01-06T22:35:35.412+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T22:35:35.421+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 6.580 seconds
+[2026-01-06T23:57:25.613+1100] {processor.py:161} INFO - Started process (PID=96072) to work on /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T23:57:25.613+1100] {processor.py:830} INFO - Processing file /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py for tasks to queue
+[2026-01-06T23:57:25.614+1100] {logging_mixin.py:188} INFO - [2026-01-06T23:57:25.613+1100] {dagbag.py:545} INFO - Filling up the DagBag from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T23:57:28.312+1100] {logging_mixin.py:188} INFO - [2026-01-06T23:57:28.312+1100] {patcher.py:346} INFO - patching driver executable /Users/fionatham/Library/Application Support/undetected_chromedriver/undetected_chromedriver
+[2026-01-06T23:57:31.319+1100] {processor.py:840} INFO - DAG(s) 'vogue_ai_data_etl' retrieved from /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py
+[2026-01-06T23:57:31.381+1100] {logging_mixin.py:188} INFO - [2026-01-06T23:57:31.381+1100] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-01-06T23:57:31.391+1100] {logging_mixin.py:188} INFO - [2026-01-06T23:57:31.391+1100] {dag.py:3947} INFO - Setting next_dagrun for vogue_ai_data_etl to 2026-01-06 00:00:00+00:00, run_after=2026-01-07 00:00:00+00:00
+[2026-01-06T23:57:31.408+1100] {processor.py:183} INFO - Processing /Users/fionatham/Documents/Projects/vogue_data_pipeline/dags/vogue_etl_dag.py took 5.798 seconds

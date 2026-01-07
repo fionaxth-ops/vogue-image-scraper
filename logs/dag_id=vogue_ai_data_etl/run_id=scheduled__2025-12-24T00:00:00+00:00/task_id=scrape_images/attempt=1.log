@@ -1,0 +1,36 @@
+[2026-01-06T14:00:50.909+1100] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-01-06T14:00:50.921+1100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: vogue_ai_data_etl.scrape_images scheduled__2025-12-24T00:00:00+00:00 [queued]>
+[2026-01-06T14:00:50.923+1100] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: vogue_ai_data_etl.scrape_images scheduled__2025-12-24T00:00:00+00:00 [queued]>
+[2026-01-06T14:00:50.924+1100] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-01-06T14:00:50.928+1100] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): scrape_images> on 2025-12-24 00:00:00+00:00
+[2026-01-06T14:00:50.931+1100] {standard_task_runner.py:64} INFO - Started process 86972 to run task
+[2026-01-06T14:00:50.935+1100] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'vogue_ai_data_etl', 'scrape_images', 'scheduled__2025-12-24T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/vogue_etl_dag.py', '--cfg-path', '/var/folders/hl/t69nqzgn30d410985yz_fxq40000gn/T/tmpbz82p5at']
+[2026-01-06T14:00:50.936+1100] {standard_task_runner.py:91} INFO - Job 18: Subtask scrape_images
+[2026-01-06T14:00:50.957+1100] {task_command.py:426} INFO - Running <TaskInstance: vogue_ai_data_etl.scrape_images scheduled__2025-12-24T00:00:00+00:00 [running]> on host fionas-macbook-pro.local
+[2026-01-06T14:00:50.981+1100] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='vogue_ai_data_etl' AIRFLOW_CTX_TASK_ID='scrape_images' AIRFLOW_CTX_EXECUTION_DATE='2025-12-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-24T00:00:00+00:00'
+[2026-01-06T14:00:50.982+1100] {taskinstance.py:430} INFO - ::endgroup::
+[2026-01-06T14:00:50.982+1100] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/hl/t69nqzgn30d410985yz_fxq40000gn/T
+[2026-01-06T14:00:50.983+1100] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python3 /opt/airflow/dags/scripts/vogue_image_scraper.py']
+[2026-01-06T14:00:50.987+1100] {subprocess.py:86} INFO - Output:
+[2026-01-06T14:00:51.001+1100] {subprocess.py:93} INFO - python3: can't open file '/opt/airflow/dags/scripts/vogue_image_scraper.py': [Errno 2] No such file or directory
+[2026-01-06T14:00:51.003+1100] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-01-06T14:00:51.003+1100] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-01-06T14:00:51.008+1100] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/fionatham/Documents/Projects/vogue_data_pipeline/venv/lib/python3.11/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-01-06T14:00:51.010+1100] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=vogue_ai_data_etl, task_id=scrape_images, run_id=scheduled__2025-12-24T00:00:00+00:00, execution_date=20251224T000000, start_date=20260106T030050, end_date=20260106T030051
+[2026-01-06T14:00:51.014+1100] {standard_task_runner.py:110} ERROR - Failed to execute job 18 for task scrape_images (Bash command failed. The command returned a non-zero exit code 2.; 86972)
+[2026-01-06T14:00:51.043+1100] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-01-06T14:00:51.052+1100] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-01-06T14:00:51.052+1100] {local_task_job_runner.py:222} INFO - ::endgroup::
