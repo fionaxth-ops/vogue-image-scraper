@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
-
 # from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -28,6 +25,8 @@ IMAGES_DIR = ROOT/"Projects/vogue_data_pipeline/images"
 IMAGES_DIR.mkdir(exist_ok=True)
 WAIT_TIME = 20
 USER_AGENT = "Mozilla/5.0"
+SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
+
 
 options = Options()
 options.add_argument("--start-maximized")
@@ -154,5 +153,5 @@ def scrape_slideshow(slideshow_url):
 # Keep this in case 
 if __name__ == "__main__":
     login_to_vogue(os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
-    scrape_slideshow()
+    scrape_slideshow(SLIDESHOW_URL)
 

@@ -1,5 +1,5 @@
 import base64
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 import glob
 from dotenv import load_dotenv
 import os
@@ -8,13 +8,14 @@ import re
 import time 
 from pathlib import Path
 
-
-BATCH_SIZE = 17
-ROOT = Path(__file__).resolve().parents[1]  # go up from src/ to project root
-TEMP_FILE_PATH = ROOT / "data" / "temp.jsonl"
-IMAGE_PATH = ROOT/ "images"
+REQUEST_DELAY_SECONDS = 3 
+BATCH_SIZE = 10
+ROOT = Path(__file__).resolve().parents[2]  # go up from src/ to project root
 load_dotenv(ROOT / ".env")
 
+BASE_PATH = Path(__file__).resolve().parent.parent.parent
+IMAGES_PATH = BASE_PATH / "images"
+TEMP_FILE_PATH = BASE_PATH / "data" / "temp.jsonl"
 
 client = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
@@ -22,68 +23,85 @@ client = OpenAI(
 )
 
 # Function to encode the image
-def encode_image(IMAGE_PATH):
-  with open(IMAGE_PATH, "rb") as image_file:
-    return base64.b64encode(image_file.read()).decode('utf-8')
+def encode_image(images_path: Path): 
+    """_summary_
 
-# Getting the base64 string
-image_files = sorted(IMAGE_PATH.glob("vogue_image_*.jpg"))
+    Args:
+        images_path (Path): _description_
 
-# Process in batches to avoid timeouts or payload limits
-for i in range(0, len(image_files), BATCH_SIZE):
-    batch = image_files[i:i + BATCH_SIZE]
-    print(f"\nProcessing batch {i//BATCH_SIZE + 1} ({len(batch)} images)...")
+    Returns:
+        _type_: _description_
+    """  
+    with open(images_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
 
-    content = [
-        {
-            "type": "text",
-            "text": """Act as a fashion trend forecaster. Analyze this runway collection for Lemaire, Spring 2026 and provide an output in JSON form of the following (for example) and provide 2-3 values per value array: 
+
+def image_analysis(images_path: Path, temp_file_path: Path):
+    # Getting the base64 string
+    # This is a hardcoded image
+    image_files = sorted(images_path.glob("vogue_image_*.jpg"))
+
+    # Process in batches to avoid timeouts or payload limits
+    for i in range(0, len(image_files), BATCH_SIZE):
+        batch = image_files[i:i + BATCH_SIZE]
+        print(f"\nProcessing batch {i//BATCH_SIZE + 1} ({len(batch)} images)...")
+
+        content = [
             {
-              "show": "Dior SS25",
-              "themes": ["romantic minimalism", "architectural silhouettes"],
-              "colors": ["soft beige", "sky blue", "charcoal"],
-              "materials": ["silk", "denim", "sheer organza"],
-              "motifs": ["floral", "geometric"],
-              "accessories": ["wide belts", "structured bags"],
-              "overall_style": "feminine utility"
+                "type": "text",
+                "text": """Act as a fashion trend forecaster. Analyze this runway collection for Lemaire, Spring 2026 and provide an output in JSON form of the following (for example) and provide 2-3 values per value array: 
+                {
+                "show": "Dior SS25",
+                "themes": ["romantic minimalism", "architectural silhouettes"],
+                "colors": ["soft beige", "sky blue", "charcoal"],
+                "materials": ["silk", "denim", "sheer organza"],
+                "motifs": ["floral", "geometric"],
+                "accessories": ["wide belts", "structured bags"],
+                "overall_style": "feminine utility"
+                }
+                """
             }
-            """
-        }
-    ]
+        ]
 
-    
-    for path in batch:
-        base64_image = encode_image(path)
-        content.append({
-            "type": "image_url",
-            "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}
-        })
-        print(path)
+        
+        for path in batch:
+            base64_image = encode_image(path)
+            content.append({
+                "type": "image_url",
+                "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}
+            })
+            print(path)
 
-    response = client.chat.completions.create(
-    model="gemini-2.0-flash",
-    messages=[
-        {
-        "role": "user", 
-        "content": content
-            }
-        ],
-    )
+        response = client.chat.completions.create(
+        model="gemini-2.0-flash",
+        messages=[
+            {
+            "role": "user", 
+            "content": content
+                }
+            ],
+        )
 
-    print("response received")
+        print("response received")
+        time.sleep(REQUEST_DELAY_SECONDS)
 
-    # Clean the data to extract the JSON
-    content = response.choices[0].message.content
-    json_str = re.search(r"```json\n(.*?)```", content, re.S).group(1)
-    data = json.loads(json_str)
+        # Clean the data to extract the JSON
+        content = response.choices[0].message.content
+        json_str = re.search(r"```json\n(.*?)```", content, re.S).group(1)
+        data = json.loads(json_str)
 
-    current_epoch_time = int(time.time())
-    data["epoch_timestamp"] = current_epoch_time
-    
-    json.dumps(data)
-    
-    # Save in a temp file 
-    with open(TEMP_FILE_PATH, "a") as f:
-        f.write(json.dumps(data))
-        f.write('\n')
-    
+        current_epoch_time = int(time.time())
+        data["epoch_timestamp"] = current_epoch_time
+        
+        json.dumps(data)
+        
+        # Create parent directory if it doesn't exist, then append to file
+        temp_file_path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(temp_file_path, "a") as f:
+            f.write(json.dumps(data))
+            f.write('\n')
+
+# Code to test the script individually
+if __name__ == "__main__": 
+    image_analysis(IMAGES_PATH, TEMP_FILE_PATH)
