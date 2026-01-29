@@ -6,6 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
 import requests
 import os
@@ -28,16 +29,16 @@ USER_AGENT = "Mozilla/5.0"
 SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 
 
-options = Options()
-options.add_argument("--start-maximized")
-options.add_argument(f"user-agent={USER_AGENT}")
-options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
 
-driver = uc.Chrome(options=options)  # automatically manages driver
+def create_driver(): 
+    options = Options()
+    options.add_argument("--start-maximized")
+    options.add_argument(f"user-agent={USER_AGENT}")
+    options.add_argument("--disable-blink-features=AutomationControlled")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
 
-wait = WebDriverWait(driver, WAIT_TIME)
+    return uc.Chrome(options=options)
 
 
 def is_logged_in(d):
@@ -47,7 +48,7 @@ def is_logged_in(d):
             return True
     return False
 
-def login_to_vogue(email: str, password: str):
+def login_to_vogue(driver, wait, email: str, password: str):
     driver.get("https://id.condenast.com/")
 
     # The selector name may change when they update the website
@@ -78,10 +79,12 @@ def login_to_vogue(email: str, password: str):
     driver.execute_script("arguments[0].click();", sign_in_button)
 
     # Remove if passkey is not asked for
-    no_passkey_button = wait.until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "#do-not-setup-passkey-button"))
-    )
-    driver.execute_script("arguments[0].click();", no_passkey_button)
+    try:
+        no_passkey_button = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#do-not-setup-passkey-button")))
+        driver.execute_script("arguments[0].click();", no_passkey_button)
+        print("Clicked 'Do not set up passkey'")
+    except TimeoutException:
+        print("No passkey prompt shown")
 
 
 def resize_image(path, size=(400, 400)):
@@ -90,7 +93,7 @@ def resize_image(path, size=(400, 400)):
         img.save(path)
 
 
-def extract_image_from_slide(slide_number: int):
+def extract_image_from_slide(driver, slide_number: int):
     """Extracts and downloads image for a given slide number."""
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
@@ -115,7 +118,7 @@ def extract_image_from_slide(slide_number: int):
     print(f"[Slide {slide_number}] Image saved as {filename.name}")
 
 
-def scrape_slideshow(slideshow_url):
+def scrape_slideshow(driver, wait, slideshow_url):
     """Navigates the Vogue slideshow and downloads images sequentially."""
     driver.get(slideshow_url)
 
@@ -137,7 +140,7 @@ def scrape_slideshow(slideshow_url):
             print("Slideshow loop detected, stopping")
             break
 
-        extract_image_from_slide(current_slide)
+        extract_image_from_slide(driver, current_slide)
         previous_slide = current_slide
 
         # Try to click the "Next" button
@@ -152,6 +155,8 @@ def scrape_slideshow(slideshow_url):
 
 # Keep this in case 
 if __name__ == "__main__":
-    login_to_vogue(os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
-    scrape_slideshow(SLIDESHOW_URL)
+    driver = create_driver()
+    wait = WebDriverWait(driver, WAIT_TIME)
+    login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
+    scrape_slideshow(driver, wait, SLIDESHOW_URL)
 

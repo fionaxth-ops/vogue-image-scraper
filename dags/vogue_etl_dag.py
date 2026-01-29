@@ -1,18 +1,23 @@
 from airflow import DAG
 from datetime import datetime
 from airflow.operators.python import PythonOperator
+from selenium.webdriver.support.ui import WebDriverWait
 import os
 from pathlib import Path
 import sys
 from urllib.parse import urlparse
+from airflow.models import Variable
 
 # Add scripts directory to path BEFORE importing from it
 sys.path.insert(0, str(Path(__file__).parent / "scripts"))
+from vogue_image_scraper import login_to_vogue, scrape_slideshow, create_driver
+from ai_analysis import image_analysis 
 
 SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
-BASE_PATH = Path(__file__).resolve().parent.parent.parent
-IMAGES_PATH = BASE_PATH / "images"
-TEMP_FILE_PATH = BASE_PATH / "data" / "temp.jsonl"
+BASE_PATH = os.getenv("VOGUE_BASE_DIR", "/tmp/vogue") 
+IMAGES_PATH = BASE_PATH / "Projects/vogue_data_pipeline/images"
+TEMP_FILE_PATH = BASE_PATH / "/Projects/vogue_data_pipeline/data/temp.jsonl"
+WAIT_TIME = 20
 
 
 def process_folder_structure(url)-> dict: 
@@ -35,17 +40,15 @@ def process_folder_structure(url)-> dict:
     }
 
 def scrape_task(url):
-    from vogue_image_scraper import login_to_vogue, scrape_slideshow
-
+    driver = create_driver()
+    wait = WebDriverWait(driver, WAIT_TIME)
     # Moved imports inside the function as Airflow constantly parses the DAG file
     # causing the chrome driver to be initialised 
-    login_to_vogue(os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
-    scrape_slideshow(url)
+    login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
+    scrape_slideshow(driver, wait, url)
 
 def generate_trend_data(images_path, temp_file_path): 
-    from ai_analysis import image_analysis
     image_analysis(images_path, temp_file_path)
-
 
 with DAG(
     dag_id="vogue_ai_data_etl",

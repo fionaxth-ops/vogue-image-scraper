@@ -11,7 +11,7 @@ from pathlib import Path
 REQUEST_DELAY_SECONDS = 3 
 BATCH_SIZE = 10
 ROOT = Path(__file__).resolve().parents[2]  # go up from src/ to project root
-load_dotenv(ROOT / ".env")
+load_dotenv()
 
 BASE_PATH = Path(__file__).resolve().parent.parent.parent
 IMAGES_PATH = BASE_PATH / "images"
@@ -39,6 +39,11 @@ def encode_image(images_path: Path):
 def image_analysis(images_path: Path, temp_file_path: Path):
     # Getting the base64 string
     # This is a hardcoded image
+
+    print("IMAGES_PATH:", images_path)
+    print("Exists?", images_path.exists())
+    print("Files:", list(images_path.glob("*")))
+
     image_files = sorted(images_path.glob("vogue_image_*.jpg"))
 
     # Process in batches to avoid timeouts or payload limits
@@ -73,7 +78,7 @@ def image_analysis(images_path: Path, temp_file_path: Path):
             print(path)
 
         response = client.chat.completions.create(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         messages=[
             {
             "role": "user", 
