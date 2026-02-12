@@ -15,7 +15,11 @@ import time
 from PIL import Image
 from dotenv import load_dotenv
 from pathlib import Path
-import undetected_chromedriver as uc
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+os.environ["OBJC_DISABLE_INITIALIZE_FORK_SAFETY"] = "YES"
 
 
 load_dotenv()
@@ -29,6 +33,32 @@ USER_AGENT = "Mozilla/5.0"
 SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 
 
+def get_chromedriver_binary() -> str:
+    """
+    Returns the full path to the ChromeDriver binary (ARM64 on Mac),
+    instead of accidentally returning a text file like THIRD_PARTY_NOTICES.chromedriver which is a common error
+    """
+    # Step 1: Let WDM download the driver folder
+    driver_folder = Path(ChromeDriverManager().install()).parent
+
+    # Step 2: Check if the folder contains the real binary
+    # Possible locations
+    candidates = [
+        driver_folder,  # in case install() returns folder containing binary
+        driver_folder / "chromedriver",  # normal case
+        driver_folder / "chromedriver-mac-arm64" / "chromedriver",  # ARM64 Mac
+    ]
+
+    for candidate in candidates:
+        # print(f"CANDIDATE {str(candidate)}")
+        # print("is_file()", candidate.is_file())
+        # print("os.access()", os.access(candidate, os.X_OK))
+        if candidate.is_file() and os.access(candidate, os.X_OK):
+            return str(candidate)
+
+    raise FileNotFoundError(
+        f"ChromeDriver binary not found in {driver_folder}. Check your WDM download."
+    )
 
 def create_driver(): 
     options = Options()
@@ -37,8 +67,14 @@ def create_driver():
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--headless=new")
 
-    return uc.Chrome(options=options)
+    binary_path = get_chromedriver_binary()
+
+    print(f"Hello {binary_path}")
+    service = Service(binary_path)
+    driver = webdriver.Chrome(service=service, options=options)
+    return driver
 
 
 def is_logged_in(d):
@@ -155,8 +191,12 @@ def scrape_slideshow(driver, wait, slideshow_url):
 
 # Keep this in case 
 if __name__ == "__main__":
-    driver = create_driver()
-    wait = WebDriverWait(driver, WAIT_TIME)
-    login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
-    scrape_slideshow(driver, wait, SLIDESHOW_URL)
 
+    driver = create_driver()
+    driver.get("https://www.vogue.com")
+    print(driver.title)
+    driver.quit()
+    # driver = create_driver()
+    # wait = WebDriverWait(driver, WAIT_TIME)
+    # login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
+    # scrape_slideshow(driver, wait, SLIDESHOW_URL)

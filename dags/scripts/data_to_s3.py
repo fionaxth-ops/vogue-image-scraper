@@ -1,12 +1,26 @@
 import boto3 
-import logging
 import os
-import time 
 from dotenv import load_dotenv
+import botocore 
 
 load_dotenv()
 
-def upload_to_s3(bucket:str, key:str, content_type: str):
+def ensure_bucket(bucket_name: str):
+    s3_client = boto3.client(
+        's3',
+        aws_access_key_id=os.getenv('AWS_ACCESS_KEY'),
+        aws_secret_access_key=os.getenv('AWS_SECRET')
+    )
+    try:
+        s3_client.head_bucket(Bucket=bucket_name)
+    except botocore.exceptions.ClientError:
+        # Bucket does not exist, create it
+        s3_client.create_bucket(
+            Bucket=bucket_name,
+            CreateBucketConfiguration={'LocationConstraint': 'us-east-2'}  # change region if needed
+        )
+
+def upload_to_s3(bucket:str, key:str, file_path:str):
     """Uploads data to S3 depending on data type
 
     Args:
@@ -17,10 +31,18 @@ def upload_to_s3(bucket:str, key:str, content_type: str):
                             aws_access_key_id=os.getenv('AWS_ACCESS_KEY'), 
                             aws_secret_access_key=os.getenv('AWS_SECRET')
                             )
+    
+    ensure_bucket(bucket)
+    
+    file_path = str(file_path)  # ensure string
 
-    s3_client.put_object(Bucket=bucket, Key=key, ContentType=content_type)
+    s3_client.upload_file(
+                         Filename=file_path,
+                         Bucket=bucket, 
+                         Key=key
+                        )
 
-
+    
 
 
 
