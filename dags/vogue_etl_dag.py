@@ -13,10 +13,9 @@ from scripts.vogue_image_scraper import login_to_vogue, scrape_slideshow, create
 from scripts.ai_analysis import image_analysis 
 from scripts.data_to_s3 import upload_to_s3
 
-SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 BASE_PATH = Path(os.getenv("VOGUE_BASE_DIR", "/tmp/vogue"))
-IMAGES_PATH = BASE_PATH / "images"
-TEMP_FILE_PATH = BASE_PATH / "temp.jsonl"
+IMAGES_PATH = BASE_PATH / "Projects/vogue_data_pipeline/images"
+TEMP_FILE_PATH = BASE_PATH / "Projects/vogue_data_pipeline/data/temp.jsonl"
 WAIT_TIME = 20
 BUCKET_NAME = "vogue-runway-data"
 
@@ -29,9 +28,9 @@ def process_folder_structure(url:Path)-> dict:
 
     Returns:
         dict: 
-            season (string): Season of the runway show
-            designer (string): Designer of the show
-            source (string): Host of the image
+            season (str): Season of the runway show
+            designer (str): Designer of the show
+            source (str): Host of the image
     """    
     path_parts = urlparse(url).path.strip("/").split("/")
     return {
@@ -40,7 +39,8 @@ def process_folder_structure(url:Path)-> dict:
         "source": "vogue" 
     }
 
-def scrape_task(url: Path):
+def scrape_task(params: dict):
+    url = params['slideshow_url']
     driver = create_driver()
     wait = WebDriverWait(driver, WAIT_TIME)
     # Moved imports inside the function as Airflow constantly parses the DAG file
@@ -51,7 +51,7 @@ def scrape_task(url: Path):
 def generate_trend_data(images_path, temp_file_path): 
     image_analysis(images_path, temp_file_path)
     
-def load_to_s3(url:Path, bucket:str):
+def load_to_s3(bucket: str, params: dict):
     """Upload slideshow images and analysis results to S3 organized by show.
 
     Builds an S3 key prefix from the slideshow URL (season/designer) via
@@ -66,11 +66,9 @@ def load_to_s3(url:Path, bucket:str):
     Returns:
         None
     """
+    url = params['slideshow_url']
     folder_dict = process_folder_structure(url)
     base_key = f"{folder_dict['season']}/{folder_dict['designer']}"
-
-    print(str(IMAGES_PATH))
-    print(str(TEMP_FILE_PATH))
 
     for image_file in IMAGES_PATH.iterdir(): 
         if image_file.is_file():
@@ -95,7 +93,7 @@ with DAG(
     max_active_runs=1,
     render_template_as_native_obj=True, 
     params={
-        "url": Param(
+        "slideshow_url": Param(
             default="https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1", 
             type="string", 
             description="Vogue slideshow URL to scrape"
@@ -108,7 +106,7 @@ with DAG(
         
         task_id="scrape_vogue_slideshow",
         python_callable=scrape_task,
-        op_args=[SLIDESHOW_URL]
+        op_args=[]
     )
     transform = PythonOperator(
         task_id="get_analysis",
@@ -119,7 +117,7 @@ with DAG(
 
         task_id = "load_data",
         python_callable=load_to_s3, 
-        op_args=[SLIDESHOW_URL, BUCKET_NAME]
+        op_args=[BUCKET_NAME]
     )
     
     extract >> transform >> load
