@@ -6,13 +6,11 @@ import os
 from pathlib import Path
 import sys
 from urllib.parse import urlparse
-from airflow.models import Variable
 
 # Add scripts directory to path BEFORE importing from it
-sys.path.insert(0, str(Path(__file__).parent / "scripts"))
-from vogue_image_scraper import login_to_vogue, scrape_slideshow, create_driver
-from ai_analysis import image_analysis 
-from data_to_s3 import upload_to_s3
+from scripts.vogue_image_scraper import login_to_vogue, scrape_slideshow, create_driver
+from scripts.ai_analysis import image_analysis 
+from scripts.data_to_s3 import upload_to_s3
 
 SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 BASE_PATH = Path(os.getenv("VOGUE_BASE_DIR", "/tmp/vogue"))
@@ -52,8 +50,21 @@ def scrape_task(url: Path):
 def generate_trend_data(images_path, temp_file_path): 
     image_analysis(images_path, temp_file_path)
     
-def load_to_s3(url:Path, bucket:str): 
+def load_to_s3(url:Path, bucket:str):
+    """Upload slideshow images and analysis results to S3 organized by show.
 
+    Builds an S3 key prefix from the slideshow URL (season/designer) via
+    `process_folder_structure`, uploads all files found in `IMAGES_PATH`
+    under `<season>/<designer>/images/`, and uploads the analysis file to
+    `<season>/<designer>/analysis/trends.jsonl`.
+
+    Args:
+        url (Path): URL of the slideshow page used to determine storage keys.
+        bucket (str): Name of the S3 bucket to upload files into.
+
+    Returns:
+        None
+    """
     folder_dict = process_folder_structure(url)
     base_key = f"{folder_dict['season']}/{folder_dict['designer']}"
 
@@ -96,7 +107,7 @@ with DAG(
         op_args=[IMAGES_PATH, TEMP_FILE_PATH]
     )
     load = PythonOperator(
-        
+
         task_id = "load_data",
         python_callable=load_to_s3, 
         op_args=[SLIDESHOW_URL, BUCKET_NAME]
