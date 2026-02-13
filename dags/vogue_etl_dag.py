@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import sys
 from urllib.parse import urlparse
+from airflow.models.param import Param
 
 # Add scripts directory to path BEFORE importing from it
 from scripts.vogue_image_scraper import login_to_vogue, scrape_slideshow, create_driver
@@ -92,7 +93,15 @@ with DAG(
     schedule=None,
     catchup=False,
     max_active_runs=1,
-    render_template_as_native_obj=True
+    render_template_as_native_obj=True, 
+    params={
+        "url": Param(
+            default="https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1", 
+            type="string", 
+            description="Vogue slideshow URL to scrape"
+        )
+    }
+    
 ) as dag:
 
     extract = PythonOperator(
