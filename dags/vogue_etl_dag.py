@@ -15,8 +15,8 @@ from scripts.data_to_s3 import upload_to_s3
 
 SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 BASE_PATH = Path(os.getenv("VOGUE_BASE_DIR", "/tmp/vogue"))
-IMAGES_PATH = BASE_PATH / "Projects/vogue_data_pipeline/images"
-TEMP_FILE_PATH = BASE_PATH / "Projects/vogue_data_pipeline/data/temp.jsonl"
+IMAGES_PATH = BASE_PATH / "images"
+TEMP_FILE_PATH = BASE_PATH / "temp.jsonl"
 WAIT_TIME = 20
 BUCKET_NAME = "vogue-runway-data"
 
