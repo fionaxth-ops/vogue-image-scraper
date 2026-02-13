@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
@@ -20,18 +16,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 os.environ["OBJC_DISABLE_INITIALIZE_FORK_SAFETY"] = "YES"
-
-
 load_dotenv()
-
-### CONFIG ###
-ROOT = Path.cwd().parents[1]
-IMAGES_DIR = ROOT/"Projects/vogue_data_pipeline/images"
-IMAGES_DIR.mkdir(exist_ok=True)
-WAIT_TIME = 20
-USER_AGENT = "Mozilla/5.0"
-SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
-
 
 def get_chromedriver_binary() -> str:
     """
@@ -61,6 +46,11 @@ def get_chromedriver_binary() -> str:
     )
 
 def create_driver(): 
+    """ Returns a configured Chrome WebDriver for scraping
+
+    Returns:
+        driver: Chrome Driver 
+    """    
     options = Options()
     options.add_argument("--start-maximized")
     options.add_argument(f"user-agent={USER_AGENT}")
@@ -78,13 +68,40 @@ def create_driver():
 
 
 def is_logged_in(d):
+    """Checks if the user is logged into Vogue by inspecting browser cookies.
+    
+    Looks for vogue.com domain cookies or specific authentication cookie names
+    (cnid, session, auth_token) to determine login status.
+    
+    Args:
+        d: Selenium WebDriver instance
+        
+    Returns:
+        bool: True if logged in (auth cookies found), False otherwise
+    """
     cookies = d.get_cookies()
     for c in cookies:
         if "vogue.com" in c["domain"] or c["name"] in ["cnid", "session", "auth_token"]:
             return True
     return False
 
-def login_to_vogue(driver, wait, email: str, password: str):
+def login_to_vogue(driver: webdriver.Chrome, wait: WebDriverWait, email: str, password: str):
+    """Logs into Vogue using Condenast credentials via Selenium automation.
+    
+    Navigates to the Condenast login page, finds the Vogue login button, and
+    enters email/password credentials. Handles optional passkey prompts by
+    skipping them if presented. Uses JavaScript clicks to trigger real user
+    interactions and WebDriverWait for element synchronization.
+    
+    Args:
+        driver: Selenium WebDriver instance
+        wait: WebDriverWait instance for element synchronization
+        email (str): Vogue account email address
+        password (str): Vogue account password
+        
+    Raises:
+        TimeoutException: If required login elements don't appear within timeout
+    """ 
     driver.get("https://id.condenast.com/")
 
     # The selector name may change when they update the website
@@ -125,12 +142,27 @@ def login_to_vogue(driver, wait, email: str, password: str):
 
 def resize_image(path, size=(400, 400)):
     with Image.open(path) as img: 
+        # Uses LANCZ0S as it maintains the details within the image
+        # therefore analysis can still be completed on the image
         img.thumbnail(size, Image.Resampling.LANCZOS)
         img.save(path)
 
 
-def extract_image_from_slide(driver, slide_number: int):
-    """Extracts and downloads image for a given slide number."""
+def extract_image_from_slide(driver: webdriver.Chrome, slide_number: int, images_dir: Path):
+    """Extract the main image from the current slideshow slide and save it.
+
+    Parses the current page source from `driver` to find an `<img>` tag with
+    a `data-src` attribute, downloads the image, saves it to `IMAGES_DIR` as
+    `vogue_image_<slide_number>.jpg`, and resizes it using `resize_image`.
+
+    Args:
+        driver: Selenium WebDriver instance currently viewing the slide.
+        slide_number (int): Numeric identifier for the slide (used in filename).
+
+    Returns:
+        None
+    """
+
     html = driver.page_source
     soup = BeautifulSoup(html, "html.parser")
 
@@ -154,8 +186,18 @@ def extract_image_from_slide(driver, slide_number: int):
     print(f"[Slide {slide_number}] Image saved as {filename.name}")
 
 
-def scrape_slideshow(driver, wait, slideshow_url):
-    """Navigates the Vogue slideshow and downloads images sequentially."""
+def scrape_slideshow(driver: webdriver.Chrome, wait: WebDriverWait, slideshow_url: str, images_dir: Path):
+    """Scrape a Vogue slideshow, save each slide image, then quit.
+
+    Args:
+        driver: Selenium WebDriver.
+        wait: WebDriverWait for element synchronization.
+        slideshow_url: Slideshow URL to load.
+
+    Raises:
+        TimeoutException: If required elements don't appear.
+    """
+
     driver.get(slideshow_url)
 
     wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "img[data-src]")))
@@ -176,7 +218,7 @@ def scrape_slideshow(driver, wait, slideshow_url):
             print("Slideshow loop detected, stopping")
             break
 
-        extract_image_from_slide(driver, current_slide)
+        extract_image_from_slide(driver, current_slide, images_dir)
         previous_slide = current_slide
 
         # Try to click the "Next" button
@@ -191,12 +233,16 @@ def scrape_slideshow(driver, wait, slideshow_url):
 
 # Keep this in case 
 if __name__ == "__main__":
+    
+    ### CONFIG ###
+    ROOT = Path.cwd().parents[1]
+    IMAGES_DIR = ROOT/"Projects/vogue_data_pipeline/images"
+    IMAGES_DIR.mkdir(exist_ok=True)
+    WAIT_TIME = 20
+    USER_AGENT = "Mozilla/5.0"
+    SLIDESHOW_URL = "https://www.vogue.com/fashion-shows/spring-2026-ready-to-wear/christophe-lemaire/slideshow/collection#1"
 
     driver = create_driver()
-    driver.get("https://www.vogue.com")
-    print(driver.title)
-    driver.quit()
-    # driver = create_driver()
-    # wait = WebDriverWait(driver, WAIT_TIME)
-    # login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
-    # scrape_slideshow(driver, wait, SLIDESHOW_URL)
+    wait = WebDriverWait(driver, WAIT_TIME)
+    login_to_vogue(driver, wait, os.getenv("VOGUE_EMAIL"), os.getenv("VOGUE_PASSWORD"))
+    scrape_slideshow(driver, wait, SLIDESHOW_URL)

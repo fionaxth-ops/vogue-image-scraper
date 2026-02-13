@@ -16,12 +16,13 @@ from scripts.data_to_s3 import upload_to_s3
 BASE_PATH = Path(os.getenv("VOGUE_BASE_DIR", "/tmp/vogue"))
 IMAGES_PATH = BASE_PATH / "Projects/vogue_data_pipeline/images"
 TEMP_FILE_PATH = BASE_PATH / "Projects/vogue_data_pipeline/data/temp.jsonl"
+# Can be configurable 
 WAIT_TIME = 20
 BUCKET_NAME = "vogue-runway-data"
 
-
+# TODO: Would check across other URLs to check if the URL information is always in the same structure. 
 def process_folder_structure(url:Path)-> dict: 
-    """Creates the folder structure for the images based off the information in the URL
+    """Creates the folder structure for the images based off the information in the URL. 
 
     Args:
         url (Path): URL of the slideshow to be scraped
@@ -105,8 +106,7 @@ with DAG(
     extract = PythonOperator(
         
         task_id="scrape_vogue_slideshow",
-        python_callable=scrape_task,
-        op_args=[]
+        python_callable=scrape_task
     )
     transform = PythonOperator(
         task_id="get_analysis",
