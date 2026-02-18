@@ -3,14 +3,12 @@ import os
 from dotenv import load_dotenv
 import botocore 
 
+# For aws config. 
 load_dotenv()
 
 def ensure_bucket(bucket_name: str):
-    s3_client = boto3.client(
-        's3',
-        aws_access_key_id=os.getenv('AWS_ACCESS_KEY'),
-        aws_secret_access_key=os.getenv('AWS_SECRET')
-    )
+    
+    s3_client = boto3.client('s3')
     try:
         s3_client.head_bucket(Bucket=bucket_name)
     except botocore.exceptions.ClientError:
@@ -20,17 +18,14 @@ def ensure_bucket(bucket_name: str):
             CreateBucketConfiguration={'LocationConstraint': 'us-east-2'}  # change region if needed
         )
 
-def upload_to_s3(bucket:str, key:str, file_path:str):
+def upload_to_s3(bucket: str, key:str, file_path:str):
     """Uploads data to S3 depending on data type
 
     Args:
         content_type (str): enum[image, text]
     """
     
-    s3_client = boto3.client('s3',
-                            aws_access_key_id=os.getenv('AWS_ACCESS_KEY'), 
-                            aws_secret_access_key=os.getenv('AWS_SECRET')
-                            )
+    s3_client = boto3.client('s3')
     
     ensure_bucket(bucket)
     

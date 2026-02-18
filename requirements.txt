@@ -1,10 +1,5 @@
 # --- Core ---
 apache-airflow==2.9.3
-# Follow official constraints
-apache-airflow-providers-common-io #==1.6.3
-apache-airflow-providers-common-sql #==1.28.1
-apache-airflow-providers-smtp #==2.3.1
-apache-airflow-providers-standard #==1.9.0
 
 # --- Selenium (safe version) ---
 selenium==4.10.0
@@ -14,10 +9,13 @@ webdriver-manager==4.0.1
 beautifulsoup4==4.12.3
 requests==2.32.3
 
+# --- AWS & Cloud ---
+boto3==1.35.0
+botocore==1.35.0
+
+# --- AI/ML ---
+openai==1.7.2
+
 # --- Utility libraries ---
 python-dotenv==1.0.1
 Pillow==10.2.0
-
-webdriver-manager==4.0.1
-
-

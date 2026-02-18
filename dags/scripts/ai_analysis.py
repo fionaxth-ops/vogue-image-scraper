@@ -1,11 +1,13 @@
 import base64
-from openai import OpenAI, RateLimitError
+from openai import OpenAI
 import glob
 from dotenv import load_dotenv
 import os
 import json
 import re
 import time 
+import itertools
+
 from pathlib import Path
 
 REQUEST_DELAY_SECONDS = 3 
@@ -13,32 +15,33 @@ BATCH_SIZE = 10
 ROOT = Path(__file__).resolve().parents[2]  # go up from src/ to project root
 load_dotenv()
 
-BASE_PATH = Path(__file__).resolve().parent.parent.parent
-IMAGES_PATH = BASE_PATH / "images"
-TEMP_FILE_PATH = BASE_PATH / "data" / "temp.jsonl"
-
 client = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
 # Function to encode the image
-def encode_image(images_path: Path): 
-    """_summary_
-
-    Args:
-        images_path (Path): _description_
-
-    Returns:
-        _type_: _description_
-    """  
+def encode_image(images_path: Path):
     with open(images_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 
 def image_analysis(images_path: Path, temp_file_path: Path):
-    # Getting the base64 string
-    # This is a hardcoded image
+    """Analyze images in batches using the Gemini model and append JSONL results.
+
+    Scans `images_path` for files named `vogue_image_*.jpg`, encodes each
+    image to base64 and sends images to the Gemini model in batches. The
+    function extracts the JSON response from the model, adds an
+    `epoch_timestamp`, and appends each result as a separate JSON line to
+    `temp_file_path`.
+
+    Args:
+        images_path (Path): Directory containing image files to analyze.
+        temp_file_path (Path): Output file path where JSONL results are appended.
+
+    Returns:
+        None
+    """
 
     print("IMAGES_PATH:", images_path)
     print("Exists?", images_path.exists())
@@ -47,9 +50,8 @@ def image_analysis(images_path: Path, temp_file_path: Path):
     image_files = sorted(images_path.glob("vogue_image_*.jpg"))
 
     # Process in batches to avoid timeouts or payload limits
-    for i in range(0, len(image_files), BATCH_SIZE):
-        batch = image_files[i:i + BATCH_SIZE]
-        print(f"\nProcessing batch {i//BATCH_SIZE + 1} ({len(batch)} images)...")
+    for i, batch in enumerate(itertools.batches(image_files, BATCH_SIZE)):
+        print(f"\nProcessing batch {i + 1} ({len(batch)} images)...")
 
         content = [
             {
@@ -109,4 +111,9 @@ def image_analysis(images_path: Path, temp_file_path: Path):
 
 # Code to test the script individually
 if __name__ == "__main__": 
+    BASE_PATH = Path(__file__).resolve().parent.parent.parent
+    IMAGES_PATH = BASE_PATH / "images"
+    TEMP_FILE_PATH = BASE_PATH / "data" / "temp.jsonl"
+
     image_analysis(IMAGES_PATH, TEMP_FILE_PATH)
+

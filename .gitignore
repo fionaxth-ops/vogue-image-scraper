@@ -2,3 +2,11 @@
 .env
 images
 data
+venv
+logs
+**/__pycache__
+config
+plugins
+.python-version
+webserver_config.py
+.DS_Store
